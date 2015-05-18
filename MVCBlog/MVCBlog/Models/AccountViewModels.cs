@@ -61,7 +61,7 @@ namespace MVCBlog.Models
         [Display(Name = "Remember me?")]
         public bool RememberMe { get; set; }
     }
-
+    /*
     public class RegisterViewModel
     {
         [Required]
@@ -79,8 +79,8 @@ namespace MVCBlog.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
-    }
-
+    }*/
+    /*
     public class ResetPasswordViewModel
     {
         [Required]
@@ -108,5 +108,5 @@ namespace MVCBlog.Models
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
-    }
+    }*/
 }

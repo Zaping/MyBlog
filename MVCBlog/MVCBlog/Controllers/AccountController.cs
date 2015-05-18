@@ -77,9 +77,10 @@ namespace MVCBlog.Controllers
             // To enable password failures to trigger account lockout, change to shouldLockout: true
             var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
             switch (result)
-            {
+            { 
+                
                 case SignInStatus.Success:
-                    return RedirectToLocal(returnUrl);
+                  return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:
@@ -133,7 +134,7 @@ namespace MVCBlog.Controllers
                     return View(model);
             }
         }
-
+        /*
         //
         // GET: /Account/Register
         [AllowAnonymous]
@@ -171,7 +172,7 @@ namespace MVCBlog.Controllers
             // If we got this far, something failed, redisplay form
             return View(model);
         }
-
+        */
         //
         // GET: /Account/ConfirmEmail
         [AllowAnonymous]
@@ -184,7 +185,7 @@ namespace MVCBlog.Controllers
             var result = await UserManager.ConfirmEmailAsync(userId, code);
             return View(result.Succeeded ? "ConfirmEmail" : "Error");
         }
-
+        /*
         //
         // GET: /Account/ForgotPassword
         [AllowAnonymous]
@@ -228,7 +229,8 @@ namespace MVCBlog.Controllers
         {
             return View();
         }
-
+        */
+        /*
         //
         // GET: /Account/ResetPassword
         [AllowAnonymous]
@@ -270,7 +272,7 @@ namespace MVCBlog.Controllers
         {
             return View();
         }
-
+        */
         //
         // POST: /Account/ExternalLogin
         [HttpPost]

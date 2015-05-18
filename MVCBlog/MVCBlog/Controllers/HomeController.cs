@@ -26,5 +26,12 @@ namespace MVCBlog.Controllers
 
             return View();
         }
+        [Authorize]
+        public ActionResult CreatePost()
+        {
+            
+            ViewBag.Message = "Create a post.";
+            return View();
+        }
     }
 }
