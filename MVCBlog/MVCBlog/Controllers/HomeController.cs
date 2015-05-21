@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using MVCBlog.Models;
 using System.Web.Mvc;
-
+using System.Linq;
 namespace MVCBlog.Controllers
 {
     public class HomeController : Controller
     {
+        private BlogDBContext db = new BlogDBContext();
         public ActionResult Index()
         {
-            return View();
+            return View(db.Blogs.ToList());
         }
 
         public ActionResult About()
