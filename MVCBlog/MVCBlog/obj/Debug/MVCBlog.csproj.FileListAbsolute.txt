@@ -108,3 +108,7 @@ C:\Users\zaping\Documents\GitHub\MyBlog\MVCBlog\MVCBlog\bin\Microsoft.Owin.Secur
 C:\Users\zaping\Documents\GitHub\MyBlog\MVCBlog\MVCBlog\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\zaping\Documents\GitHub\MyBlog\MVCBlog\MVCBlog\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\zaping\Documents\GitHub\MyBlog\MVCBlog\MVCBlog\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\zaping\Documents\GitHub\MyBlog\MVCBlog\MVCBlog\bin\PagedList.dll
+C:\Users\zaping\Documents\GitHub\MyBlog\MVCBlog\MVCBlog\bin\PagedList.Mvc.dll
+C:\Users\zaping\Documents\GitHub\MyBlog\MVCBlog\MVCBlog\bin\PagedList.xml
+C:\Users\zaping\Documents\GitHub\MyBlog\MVCBlog\MVCBlog\bin\PagedList.Mvc.xml
