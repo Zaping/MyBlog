@@ -19,7 +19,7 @@ namespace MVCBlog.Controllers
         {
             return View(db.Blogs.ToList());
         }
-
+    
         // GET: Blogs/Details/5
         public ActionResult Details(int? id)
         {
