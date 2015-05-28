@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using MVCBlog.Models;
+using System.IO;
 
 namespace MVCBlog.Controllers
 {   [Authorize]
@@ -34,7 +35,7 @@ namespace MVCBlog.Controllers
             }
             return View(blog);
         }
-
+        
         // GET: Blogs/Create
         public ActionResult Create()
         {

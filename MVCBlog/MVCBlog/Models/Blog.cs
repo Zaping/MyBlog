@@ -6,9 +6,11 @@ using System.Web;
 using System.IO;
 using System.Drawing;
 using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 
 namespace MVCBlog.Models
 {
+    [ValidateInput(false)]
     public class Blog
     {
          public Blog()
@@ -18,9 +20,11 @@ namespace MVCBlog.Models
         [Key]
         public int ID { get; set; }
         public string Title { get; set;  }
+        
         public string Content { get; set; }
         public DateTime EntryDate { get; set; }
-        //public byte[] Image { get; set; }
+        //[DataType(DataType.Upload)]
+        //public HttpPostedFileBase Image { get; set; }
 
     }
     public class BlogDBContext : DbContext
