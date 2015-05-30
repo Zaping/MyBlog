@@ -51,6 +51,7 @@ namespace MVCBlog.Controllers
         {
             if (ModelState.IsValid)
             {
+                blog.Content = Server.HtmlDecode(blog.Content);
                 db.Blogs.Add(blog);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -58,6 +59,26 @@ namespace MVCBlog.Controllers
 
             return View(blog);
         }
+public ActionResult uploadPartial()
+        {
+            var appData = Server.MapPath("~/Images/uploads");
+            var images = Directory.GetFiles(appData).Select(x => new Blog
+            {
+                Url = Url.Content("/images/uploads/" + Path.GetFileName(x))
+            });
+            return View(images);
+        }
+        public void uploadnow(HttpPostedFileWrapper upload)
+        {
+            if(upload!=null)
+            {
+                string ImageName = upload.FileName;
+                string path = System.IO.Path.Combine(Server.MapPath("~/Images/uploads"), ImageName);
+                upload.SaveAs(path);
+            }
+
+        }
+    
 
         // GET: Blogs/Edit/5
         public ActionResult Edit(int? id)
