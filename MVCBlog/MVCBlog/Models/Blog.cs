@@ -23,6 +23,7 @@ namespace MVCBlog.Models
         public string Url { get; set; }
         public string Content { get; set; }
         public DateTime EntryDate { get; set; }
+        public string ImageName { get; set; }
         //[DataType(DataType.Upload)]
         //public HttpPostedFileBase Image { get; set; }
 

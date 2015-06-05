@@ -47,7 +47,7 @@ namespace MVCBlog.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Title,Content,EntryDate")] Blog blog)
+        public ActionResult Create([Bind(Include = "ID,Title,Url,Content,EntryDate,ImageName")] Blog blog)
         {
             if (ModelState.IsValid)
             {
@@ -66,16 +66,20 @@ public ActionResult uploadPartial()
             {
                 Url = Url.Content("/images/uploads/" + Path.GetFileName(x))
             });
-            return View(images);
+            return View();
         }
-        public void uploadnow(HttpPostedFileWrapper upload)
+public void uploadnow( HttpContext context)
         {
-            if(upload!=null)
-            {
-                string ImageName = upload.FileName;
-                string path = System.IO.Path.Combine(Server.MapPath("~/Images/uploads"), ImageName);
-                upload.SaveAs(path);
-            }
+            //HttpPostedFileWrapper upload,
+            //if(upload!=null)
+            //{
+              
+                /*string Imagename = upload.FileName;
+                string path = System.IO.Path.Combine(Server.MapPath("~/Images/uploads"), Imagename);
+                upload.SaveAs(path);*/
+               
+            //}
+           
 
         }
     
@@ -100,7 +104,7 @@ public ActionResult uploadPartial()
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Title,Content,EntryDate")] Blog blog)
+        public ActionResult Edit([Bind(Include = "ID,Title,Url,Content,EntryDate,ImageName")] Blog blog)
         {
             if (ModelState.IsValid)
             {

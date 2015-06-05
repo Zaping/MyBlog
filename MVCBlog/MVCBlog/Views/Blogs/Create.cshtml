@@ -29,7 +29,12 @@
             <div class="col-md-10">
                 @Html.TextAreaFor(model => model.Content, new { @cols = "90", @rows = "20", @id = "editor", htmlAttributes = new { @class = "form-control" } })
                 <script type="text/javascript"> CKEDITOR.replace('editor', {  filebrowserImageBrowseUrl: '/Blogs/uploadPartial',
-     filebrowserImageUploadUrl: '/Blogs/uploadnow',htmlEncodeOutput: true, enterMode: CKEDITOR.ENTER_BR });</script>
+     filebrowserImageUploadUrl: '/Handler1.ashx', htmlEncodeOutput: true, enterMode: CKEDITOR.ENTER_BR
+ });
+                    function updateValue(id, value) {
+                        // this gets called from the popup window and updates the field with a new value 
+                        document.getElementById(id).value = value;
+                    }</script>
                 @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })    
           
              
