@@ -11,7 +11,6 @@
 </p>
 <table class="table">
     <tr>
-   
 
         <th>
             @Html.DisplayNameFor(model => model.Title)
@@ -31,7 +30,9 @@
             @Html.DisplayFor(modelItem => item.Title)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Content)
+            @Html.Raw(@Html.DisplayFor(modelItem => item.Content))
+                @*@<img class="container" src="@Url.Content(item.Content)" alt="@item.Content" height="120" width="160" />"*@
+            
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.EntryDate)

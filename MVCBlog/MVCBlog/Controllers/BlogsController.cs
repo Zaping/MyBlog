@@ -10,12 +10,14 @@ using MVCBlog.Models;
 using System.IO;
 
 namespace MVCBlog.Controllers
-{   [Authorize]
+{
+    [Authorize]
     public class BlogsController : Controller
     {
         private BlogDBContext db = new BlogDBContext();
 
         // GET: Blogs
+        
         public ActionResult Index()
         {
             return View(db.Blogs.ToList());
@@ -45,6 +47,7 @@ namespace MVCBlog.Controllers
         // POST: Blogs/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ID,Title,Url,Content,EntryDate,ImageName")] Blog blog)
