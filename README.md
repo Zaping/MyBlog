@@ -6,3 +6,5 @@ I managed to complete most part of the project except from comments and I have s
 **Handler1.ashx handles image upload part. 
 **Commented out register part of account controller.
 **My photo is on "About" page.
+**Uploaded Images are in images/uploads/.
+**Used ckeditor for content part.
